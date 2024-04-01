@@ -1,0 +1,55 @@
+
+.kea-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.kea-item {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  width: 100%;
+  /* max-width: 900px; */
+}
+.kea-item > img {
+ border-radius: 10px;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .kea-item {
+    
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+  }
+
+
+}
+
+
+
+
+/* this for banner owl carousel slide show */
+
+
+.owl-dots button.owl-dot.active span,
+.owl-dots button.owl-dot:hover span {
+  background-color: white !important;
+  border-radius: 50% !important;
+  height: 12px !important;
+  width: 12px !important;
+}
+
+/* .owl-dots button.owl-dot {
+  border: 1px solid gray;
+  background: white;
+  border-radius: 50%;
+  height: 19px;
+  width: 19px;
+
+} */

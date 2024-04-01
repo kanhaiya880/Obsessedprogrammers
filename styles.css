@@ -19,15 +19,16 @@ body{
     justify-content: center;
     margin-top: 35px;
     width: 750px;
-    background-color: rgba(162, 162, 162, 0.416);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    
 }
 .content > li{
     
     display: inline-block; 
     margin-right: 10px;
     text-decoration: none;
-    color: white;
+    
    
     
 }
@@ -38,10 +39,12 @@ body{
 .content > li > a{
    
     text-decoration: none;
-    color: white;
+    color: #4b4b4b !important;
    
     
 }
+
+
 @media only screen and (min-width: 768px) {
 .open-btn{
     display: none !important;
@@ -62,6 +65,14 @@ body{
 
 
 @media only screen and (max-width: 768px) {
+
+  .content > li > a{
+   
+    text-decoration: none;
+    color: #ffffff !important;
+   
+    
+}
     .mini-header-container{
         display: flex;
         width: 100vh;
@@ -78,10 +89,14 @@ body{
         width: 340px;
         border-radius: 15px;
         height: 50px;
-        background: #5e5e5e71;
+        background: #ffffff !important;
+        
       }
       .brand-title{
         margin-right:40px ;
+        color: blue !important;
+      
+       
       }
       .mini-header > .brand-logo{
         width: 32px;
@@ -159,5 +174,142 @@ margin-right: 10px;
     
 }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn{
+    border-radius: 20px !important;
+  }
+  .card{
+    background-color: rgba(255, 255, 255, 0.662);
+  }
+  .web-body-text {
+
+    margin-left: 60px;
+    color: white;
+   
+    font-size: 50px;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .small-text-in-banner {
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 1200px) {
+
+    .web-body-text {
+
+      margin-left: 60px;
+      color: white;
+     
+      font-size: 35px;
+      text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .small-text-in-banner {
+      font-size: 15px;
+    }
+
+    .earth-animation {
+      width: 400px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .mini-header-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mini-header {
+
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-top: 20px;
+
+      width: 340px;
+      border-radius: 15px;
+      height: 50px;
+      background: #5e5e5e71;
+    }
+
+    .brand-title {
+      margin-right: 40px;
+    }
+
+    .mini-header>.brand-logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 21px;
+    }
+
+    .mini-header>.brand-title {
+      color: white;
+    }
+
+
+    .web-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .web-body>.earth-animation {
+      margin-top: 0px;
+      width: 400px;
+      /* filter: blur(2px); */
+
+    }
+
+    .web-body-text {
+      width: 310px;
+      position: absolute;
+      color: white;
+      font-size: 25px;
+      text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .small-text-in-banner {
+      font-size: small;
+    }
+  }
+
+  /* service-img */
+  .service-img {
+width: 300px;
+border-radius: 20px;
+transition: all 0.5s ease; /* Adding transition for smooth animation */
+}
+
+.service-img:hover {
+width: 320px;
+border-radius: 20px;
+transform: scale(1.0); /* Apply scale transformation on hover */
+}
+
+.divider{
+  font-size: 30px;
+  color: #4b4b4b;
 }
 

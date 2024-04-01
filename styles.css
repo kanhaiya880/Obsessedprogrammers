@@ -7,88 +7,6 @@ body{
   height: 100%;
 
 } */
-/* font */
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light , p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto-regular , footer,.card-text {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium , .card-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold ,.divider,a{
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-
-
-
-
-
-
-
-
-
 .side-bar-container{
   display: flex;
   width: 100%;
@@ -125,13 +43,6 @@ body{
  
   
 }
-.content > li > a:hover{
-color: #9483ff !important;
-text-decoration-line: underline;
-text-underline-offset: 10px;
-text-decoration-color: rgb(56, 56, 56);
-}
-
 
 
 @media only screen and (min-width: 768px) {
@@ -154,15 +65,6 @@ text-decoration-color: rgb(56, 56, 56);
 
 
 @media only screen and (max-width: 768px) {
-
-.content > li > a:hover{
-  font-size: 18px;
-  color: #9483ff !important;
-  text-decoration-line: underline;
-  text-underline-offset: 10px;
-  text-decoration-color: rgb(255, 255, 255);
-}
-
 
 .content > li > a{
  
@@ -192,15 +94,9 @@ text-decoration-color: rgb(56, 56, 56);
     }
     .brand-title{
       margin-right:40px ;
-      color: rgb(86, 86, 255) !important;
-
+      color: blue !important;
     
      
-    }
-    .roboto-bold {
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-      font-style: normal;
     }
     .mini-header > .brand-logo{
       width: 32px;
@@ -279,6 +175,7 @@ margin-right: 10px;
 }
 
 }
+
 
 
 
@@ -410,3 +307,9 @@ width: 320px;
 border-radius: 20px;
 transform: scale(1.0); /* Apply scale transformation on hover */
 }
+
+.divider{
+font-size: 30px;
+color: #4b4b4b;
+}
+

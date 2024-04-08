@@ -3,63 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Bootstrap Course Card</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Custom CSS -->
+  <title>Your Website</title>
   <style>
-    /* Custom CSS for animation and responsiveness */
-    @keyframes floatAnimation {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
+    #loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      z-index: 9999; /* Ensure loader appears on top of other content */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Display elements in a column */
     }
 
-    #course-image {
-      animation: floatAnimation 4s ease-in-out infinite;
-      transition: transform 0.3s ease-in-out;
+    #loading-text {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    #course-card {
-      border: 1px solid #dee2e6;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    #progress-container {
+      width: 50%;
+      margin: 20px auto;
+      background-color: #ddd;
+      height: 30px;
+      border-radius: 5px;
       overflow: hidden;
     }
 
-    #course-image:hover {
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 576px) {
-      #course-card {
-        margin: 20px;
-      }
+    #progress-bar {
+      width: 0;
+      height: 100%;
+      background-color: #3498db; /* Blue */
+      transition: width 0.5s ease;
     }
   </style>
 </head>
 <body>
-
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div id="course-card" class="card">
-        <img id="course-image" src="https://via.placeholder.com/300x200" class="card-img-top" alt="Course Image">
-        <div class="card-body">
-          <h5 class="card-title">Introduction to Web Development</h5>
-          <p class="card-text">This course covers the fundamentals of web development, including HTML, CSS, and JavaScript. It is suitable for beginners.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          <a href="#" class="btn btn-primary">Enroll Now</a>
-        </div>
-      </div>
+  <div id="loader-container">
+    <div id="loading-text">Loading...</div>
+    <div id="progress-container">
+      <div id="progress-bar"></div>
     </div>
   </div>
-</div>
+  <div id="content" style="display: none;">
+    <!-- Your website content goes here -->
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var progressBar = document.getElementById("progress-bar");
 
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+      // Simulate content loading
+      var progress = 0;
+      var interval = setInterval(function() {
+        progress += Math.random() * 10; // Simulate random progress increase
+        progressBar.style.width = progress + "%";
+        if (progress >= 100) {
+          clearInterval(interval);
+          document.getElementById("loader-container").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }
+      }, 200); // Adjust timing as needed
+    });
+  </script>
 </body>
 </html>

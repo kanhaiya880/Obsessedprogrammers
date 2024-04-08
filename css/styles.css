@@ -1,0 +1,205 @@
+#banner {
+  width: 100%;
+  height: 200px;
+ align-content: center;
+  /* background-color: #333; */
+  color: rgb(58, 58, 58);
+  text-align: center;
+  padding: 20px 0;
+  overflow: hidden; /* Added overflow to hide overflowed text */
+
+}
+
+#text {
+  font-size: 54px;
+  animation: slideout 1s linear infinite; /* Changed animation duration to 5 seconds */
+  
+}
+
+/* @keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(0); opacity: 0; }
+} */
+
+@media only screen and (max-width: 768px) {
+  #text {
+    font-size: 20px;
+  }
+}
+
+
+#follower-count{
+  font-size: 28px;
+}
+#follower-count-container{
+  font-size: 28px;
+}
+
+
+
+
+
+
+    /* Custom CSS for card height */
+    .card {
+      height: 100%;
+      /* width: 340px; */
+     
+    -webkit-box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0);
+-moz-box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.169);
+box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.137);
+    }
+    /* Custom CSS for card image size */
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      max-width: 1004px;
+      max-height: 590px;
+    }
+    .fa-services{
+      font-size: 58px;
+      color: #2c2c2c;
+    }
+
+
+
+.divider{
+font-size: 21px;
+color: rgba(34, 34, 34, 0.84) ;
+text-transform:uppercase;
+display: inline-flex;
+
+}
+
+.divider-line {
+  height: 5px;
+  width: 0; /* Start with width 0 */
+  border-radius: 10px;
+  background-color: rgb(225, 225, 225);
+  animation: revealLine 10s forwards; /* Apply animation */
+}
+
+@keyframes revealLine {
+  0% {
+    width: 0; /* Start with width 0 */
+  }
+  100% {
+    width: 900%; /* End with width 900% */
+  }
+}
+
+
+@media only screen and (min-width: 768px) { 
+  .divider{
+    font-size: 30px;
+    color: #000000d2;
+    }
+ 
+
+}
+
+.btn{
+  border-radius: 20px !important;
+}
+.card{
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* course card */
+
+.course-card{
+  width:100% !important ;
+  max-width: 400px;
+}
+
+
+/* fonts */
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light , p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular , footer,.card-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium , .card-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold ,.divider,a{
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+body{
+  transition: all 3s ;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .divider{
+ 
+    color: rgba(0, 0, 0, 0.84) !important;
+  
+    }
+
+}

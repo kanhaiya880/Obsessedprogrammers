@@ -95,6 +95,63 @@
 </head>
 
 <body>
+<!-- loader -->
+<section>
+<style>
+  /* styles.css */
+
+/* Loader styles */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255); /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure loader is on top of everything */
+}
+
+.loader-icon {
+  border: 8px solid #f3f3f3; /* Light gray border */
+  border-top: 8px solid #3498db; /* Blue border on top */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animation for spinning */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide loader when content is loaded */
+.loaded .loader {
+  display: none;
+}
+
+</style>
+<!-- Loader -->
+<div class="loader">
+  <!-- You can customize the loader animation or icon here -->
+  <div class="loader-icon"></div>
+</div>
+
+<script>
+  // script.js
+
+// Function to hide the loader when all content is loaded
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.loader');
+  loader.parentElement.classList.add('loaded'); // Add 'loaded' class to the parent element of loader
+});
+
+</script>
+
+</section>
 
 
   <div class="side-bar-container">
@@ -115,7 +172,7 @@
         <li><a href="https://obsessedprogrammers.pythonanywhere.com/"><i class="fa-solid fa-search " style="color: #ffffff;"></i> &nbsp; Certificate</a></li>
         <li><a href="Courses.html"><i class="fa-solid fa-video " style="color: #ffffff;"></i> &nbsp; Courses</a></li>
         <li><a href="NotNow.html"><i class="fa-solid fa-project-diagram " style="color: #ffffff;"></i> &nbsp; Services</a></li>
-        <li><a href="NotNow.html"><i class="fa-solid fa-phone " style="color: #ffffff;"></i> &nbsp; Contact</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-phone " style="color: #ffffff;"></i> &nbsp; Contact</a></li>
       </ul>
     </div>
   </div>
@@ -382,6 +439,33 @@
   </section>
 
 
+  <section>
+
+
+
+  <style>
+    .whatsapp-button {
+  position: fixed;
+  bottom: 30px; /* Adjust as needed */
+  right: 25px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+.whatsapp-button img {
+  width: 48px; /* Adjust the size of the icon */
+  height: auto;
+  border-radius: 50%; /* Makes it round */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+  </style>
+
+  <a href="https://wa.me/8805406514" target="_blank" class="whatsapp-button">
+    <img src="icon/whatsapp.svg" alt="WhatsApp Icon">
+  </a>
+
+
+</section>
+
   <footer class="footer  mt-4" style="background-color: #000000; color: #fff;">
 
     <div class="container-fluid">
@@ -470,8 +554,8 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 const texts = ["Full Stack Development with HTML, CSS, JavaScript, and Python", "Learn React for Modern Web Development", "Join Obsessed Programmers for Quality Programming Courses"];
-const bgColors = ["#def2fe","black"];
-const Colors = ["black", "white", "bef4ff"]; 
+const bgColors = ["#def2fe","#def2fe"]; //["#def2fe","black"];
+const Colors = ["black"];  //["black", "white", "bef4ff"]; 
 let index = 0;
 const textElement = $("#text");
 

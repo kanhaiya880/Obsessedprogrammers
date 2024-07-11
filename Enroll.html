@@ -92,6 +92,10 @@
   <link rel="stylesheet" href="library\aos\aos.css">
   <script src="library/aos/aos.js"></script>
 
+
+
+
+
 </head>
 
 <body>
@@ -120,13 +124,100 @@
       </ul>
     </div>
   </div>
-  <div class="container-fluid mt-5 pt-3">
-    <div class="container mt-5">
+
+<!-- loader -->
+<section>
+  <style>
+    /* styles.css */
+  
+  /* Loader styles */
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255); /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure loader is on top of everything */
+  }
+  
+  .loader-icon {
+    border: 8px solid #f3f3f3; /* Light gray border */
+    border-top: 8px solid #3498db; /* Blue border on top */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animation for spinning */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hide loader when content is loaded */
+  .loaded .loader {
+    display: none;
+  }
+  
+  </style>
+  <!-- Loader -->
+  <div class="loader">
+    <!-- You can customize the loader animation or icon here -->
+    <div class="loader-icon"></div>
+  </div>
+  
+  <script>
+    // script.js
+  
+  // Function to hide the loader when all content is loaded
+  window.addEventListener('load', function() {
+    const loader = document.querySelector('.loader');
+    loader.parentElement.classList.add('loaded'); // Add 'loaded' class to the parent element of loader
+  });
+  
+  </script>
+  
+  </section>
+  <!-- loader end -->
+
+
+  <div class="container-fluid mt-5 ">
+
+  
+    <div class="container mt-5 card p-3 " >
+      <h5 class="d-flex pt-3 justify-content-center w-100 roboto-bold"> Contact Us</h5>
+          <hr style="background-color: #000000;">
 
         <script src="https://sheetdb.io/s/f/lviwshwkag9dl.js"></script>
+    </div>
         
-        
-          </div>
+       
+  </div>
+  
+  <style>
+    
+    .logo-hide{
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      bottom: 180px;
+      right: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(255, 255, 255);
+      z-index: 1000px;
+      pointer-events: none !important;
+      cursor: not-allowed !important;
+    }
+  
+  </style>
+  <div class="logo-hide">
+
   </div>
 
 <footer class="footer  mt-4 fixed-bottom z-0" >

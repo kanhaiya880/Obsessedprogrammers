@@ -1,0 +1,29 @@
+{
+  "menuItems": [
+    {
+      "name": "Home",
+      "link": "index.html",
+      "icon": "fa-solid fa-house"
+    },
+    {
+      "name": "Certificate",
+      "link": "https://obsessedprogrammers.pythonanywhere.com/",
+      "icon": "fa-solid fa-search"
+    },
+    {
+      "name": "Courses",
+      "link": "Courses.html",
+      "icon": "fa-solid fa-video"
+    },
+    {
+      "name": "Services",
+      "link": "project.html",
+      "icon": "fa-solid fa-project-diagram"
+    },
+    {
+      "name": "Contact",
+      "link": "contact.html",
+      "icon": "fa-solid fa-phone"
+    }
+  ]
+}

@@ -121,24 +121,35 @@
       }
 
       .loader-icon {
-        border: 8px solid #f3f3f3;
-        /* Light gray border */
-        border-top: 8px solid #3498db;
-        /* Blue border on top */
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-        /* Animation for spinning */
+        /* HTML: <div class="loader"></div> */
+
+        width: 40px;
+        height: 40px;
+        --c: no-repeat linear-gradient(#5470ff 0 0);
+        background: var(--c), var(--c), var(--c), var(--c);
+        background-size: 21px 21px;
+        animation: l5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
       }
 
-      @keyframes spin {
+      @keyframes l5 {
         0% {
-          transform: rotate(0deg);
+          background-position: 0 0, 100% 0, 100% 100%, 0 100%
+        }
+
+        33% {
+          background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+          width: 60px;
+          height: 60px
+        }
+
+        66% {
+          background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+          width: 60px;
+          height: 60px
         }
 
         100% {
-          transform: rotate(360deg);
+          background-position: 100% 0, 100% 100%, 0 100%, 0 0
         }
       }
 
@@ -182,12 +193,14 @@
     <div class="sidebar">
       <ul class="content">
         <li><a href="index.html"><i class="fa-solid fa-house " style="color: #ffffff;"></i> &nbsp; Home</a></li>
-        <li><a href="https://obsessedprogrammers.pythonanywhere.com/"><i class="fa-solid fa-search "
-              style="color: #ffffff;"></i> &nbsp; Certificate</a></li>
+        <li><a href="https://obsessedprogrammers.pythonanywhere.com/certificate-search/search"><i
+              class="fa-solid fa-search " style="color: #ffffff;"></i> &nbsp; Certificate</a></li>
         <li><a href="Courses.html"><i class="fa-solid fa-video " style="color: #ffffff;"></i> &nbsp; Courses</a></li>
-        <li><a href="NotNow.html"><i class="fa-solid fa-project-diagram " style="color: #ffffff;"></i> &nbsp;
-            Services</a></li>
+        <li><a href="project.html"><i class="fa-solid fa-project-diagram " style="color: #ffffff;"></i> &nbsp;
+            Projects</a></li>
         <li><a href="contact.html"><i class="fa-solid fa-phone " style="color: #ffffff;"></i> &nbsp; Contact</a></li>
+        <li><a href="https://obsessedprogrammers.pythonanywhere.com"><i class="fa fa-sign-in "
+              style="color: #ffffff;"></i> &nbsp; Log In</a></li>
       </ul>
     </div>
   </div>

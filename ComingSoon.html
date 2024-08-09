@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,16 +22,20 @@
         }
 
         .logo {
-            width: 100px; /* Adjust size as needed */
-            height: 100px; /* Adjust size as needed */
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            /* Adjust size as needed */
             margin-bottom: 20px;
-            animation: bounce 2s infinite alternate; /* Added animation */
+            animation: bounce 2s infinite alternate;
+            /* Added animation */
         }
 
         @keyframes bounce {
             0% {
                 transform: translateY(0);
             }
+
             100% {
                 transform: translateY(-20px);
             }
@@ -55,8 +60,10 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            width: 90%; /* Adjust width as needed */
-            max-width: 300px; /* Added max-width */
+            width: 90%;
+            /* Adjust width as needed */
+            max-width: 300px;
+            /* Added max-width */
             margin-bottom: 20px;
         }
 
@@ -77,8 +84,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Added responsive styles */
@@ -87,9 +99,11 @@
                 width: 80px;
                 height: 80px;
             }
+
             h1 {
                 font-size: 24px;
             }
+
             p {
                 font-size: 16px;
             }
@@ -97,13 +111,15 @@
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <img src="https://ugc.production.linktr.ee/8cdf25c2-f11b-4804-b171-f7b031374e8b_IMG-20240222-185436-535.jpeg?io=true&size=avatar-v3_0" alt="Logo" class="logo">
+        <img src="https://ugc.production.linktr.ee/8cdf25c2-f11b-4804-b171-f7b031374e8b_IMG-20240222-185436-535.jpeg?io=true&size=avatar-v3_0"
+            alt="Logo" class="logo">
         <h1>Coming Soon</h1>
         <p>We are working hard to bring you an awesome website. Stay tuned for updates!</p>
         <div id="countdown"></div>
-      
+
         <div class="loader"></div> <!-- Added loading animation -->
     </div>
 
@@ -112,7 +128,7 @@
         var countDownDate = new Date("Apr 29, 2024 15:00:00").getTime();
 
         // Update the countdown every 1 second
-        var x = setInterval(function() {
+        var x = setInterval(function () {
             // Get the current date and time
             var now = new Date().getTime();
 
@@ -127,7 +143,7 @@
 
             // Display the countdown in the element with id="countdown"
             document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+                + minutes + "m " + seconds + "s ";
 
             // If the countdown is over, display a message
             if (distance < 0) {
@@ -137,4 +153,5 @@
         }, 1000);
     </script>
 </body>
+
 </html>
